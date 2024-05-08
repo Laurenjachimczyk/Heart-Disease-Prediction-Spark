@@ -67,7 +67,7 @@ lr = LogisticRegression(featuresCol='features', labelCol=label_col, maxIter=10)
 lr_model = lr.fit(training_data)
 
 
-# Evaluate Model
+#Evaluate Model
 lr_predictions = lr_model.transform(test_data)
 
 correct_predictions = lr_predictions.filter(lr_predictions[label_col] == lr_predictions['prediction']).count()
